@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;  /* Added border */
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #e2e2e2;  /* Updated to match screenshot */
+    color: #212529;
+    transition: background-color 0.3s ease;
+}
+
+.button i {
+    margin-right: 4px;  /* Add some space between icon and text */
+}
+
+.button:hover {
+    background-color: #d2d2d2;  /* Slightly darker on hover */
+}
+
+.button.primary {
+    background-color: #ff8c00;  /* Changed to orange */
+    border-color: #ff8c00;
+    color: black;  /* Changed to black */
+}
+
+.button.primary:hover {
+    background-color: #e67e00;
+}
+
+.button.success {
+    background-color: #fafad2;  /* Changed to light yellow */
+    border-color: #e6e6bc;
+    color: black;
+}
+
+.button.success:hover {
+    background-color: #f0f0c8;
+}
+
+.button.warning {
+    background-color: white;  /* Changed to white */
+    border-color: #ccc;
+    color: black;
+}
+
+.button.warning:hover {
+    background-color: #f8f8f8;
+}
+
+.button.danger {
+    background-color: #e2e2e2;  /* Changed to match default gray */
+    border-color: #ccc;
+    color: black;
+}
+
+.button.danger:hover {
+    background-color: #d2d2d2;
+}

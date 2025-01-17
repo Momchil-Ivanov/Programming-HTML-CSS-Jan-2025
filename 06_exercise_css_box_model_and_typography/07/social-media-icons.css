@@ -1,0 +1,28 @@
+body {
+    margin: 40px;
+    padding: 0;
+    background-color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.social-container {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+}

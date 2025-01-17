@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.accordion-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+details {
+    border-bottom: 1px solid #ddd;
+}
+
+details:last-child {
+    border-bottom: none;
+}
+
+summary {
+    padding: 15px;
+    cursor: col-resize;
+    font-weight: bold;
+    position: relative;
+    list-style: none;
+}
+
+summary::before {
+    content: '>';
+    margin-right: 8px;
+}
+
+details[open] summary::before {
+    content: 'v';
+}
+
+/* Remove the previous after pseudo-elements if they exist */
+summary::after {
+    content: none;
+}
+
+details[open] summary::after {
+    content: none;
+}
+
+
+.content {
+    padding: 15px;
+    background-color: white;
+}
+
+.content p {
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}

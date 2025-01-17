@@ -1,0 +1,31 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    border: 2px solid green;
+}
+
+/* Common styles for all sections */
+header, .banner, .articles, footer {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+/* Wrapper styles */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid blue;
+}
+
+/* Remove individual section background colors */
+header, .banner, .articles, footer {
+    background-color: transparent;
+}
