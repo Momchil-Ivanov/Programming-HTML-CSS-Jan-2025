@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.flex-container {
+    display: flex;
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 10px 0;
+    align-items: flex-start;
+}
+
+.flex-item {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom order classes */
+.custom-order-1 {
+    order: 1;
+}
+
+.custom-order-2 {
+    order: 2;
+}
+
+.custom-order-3 {
+    order: 3;
+}
+
+.custom-order-4 {
+    order: 4;
+}
+
+.custom-order-5 {
+    order: 5;
+}
+
+.custom-order-6 {
+    order: 6;
+} 

@@ -1,0 +1,39 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Flex container styles */
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Flex item styles */
+.flex-item {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gap variations */
+.gap-row {
+    gap: 2em 0;
+}
+
+.gap-column {
+    gap: 0 2em;
+}
+
+.gap {
+    gap: 2em;
+} 

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border: 2px solid blue;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: #eee;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    min-width: 50px;
+}
+
+/* Default flex-grow is 0, so no additional styles needed for the first container */
+
+/* For the second container where all items grow equally */
+.flex-grow-one .flex-item {
+    flex-grow: 1;
+}
+
+/* For the third container where only the second item grows */
+.flex-grow-2nd-only .flex-item:nth-child(2) {
+    flex-grow: 1;
+}
+
+/* For the fourth container where items grow proportionally */
+.flex-grow-proportional .flex-item:nth-child(1) {
+    flex-grow: 1;
+}
+
+.flex-grow-proportional .flex-item:nth-child(2) {
+    flex-grow: 2;
+}
+
+.flex-grow-proportional .flex-item:nth-child(3) {
+    flex-grow: 3;
+} 

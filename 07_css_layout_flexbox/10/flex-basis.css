@@ -1,0 +1,33 @@
+/* Base styles */
+.flex-container {
+    display: flex;
+    margin: 20px;
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Flex basis styles */
+.flex-basis-5em .flex-item {
+    flex-basis: 5em;
+}
+
+/* Flex shrink styles */
+.flex-shrink-zero .flex-item {
+    flex-shrink: 0;
+}
+
+/* Flex grow styles */
+.flex-grow-one {
+    width: 900px;
+}
+
+.flex-grow-one .flex-item {
+    flex-grow: 1;
+} 
