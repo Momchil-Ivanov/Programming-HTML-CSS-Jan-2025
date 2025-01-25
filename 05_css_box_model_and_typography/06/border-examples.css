@@ -1,0 +1,31 @@
+/* Common styles for all divs */
+div {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+}
+
+/* Specific border styles */
+.solid-border {
+    border: 4px solid black;
+}
+
+.dashed-border {
+    border: 3px dashed #333;
+}
+
+.dotted-border {
+    border: 2px dotted #666;
+}
+
+.mixed-border {
+    border-top: 3px dashed #333;
+    border-bottom: 3px dashed #333;
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+}
+
+/* Basic paragraph styling */
+p {
+    margin: 0;
+}

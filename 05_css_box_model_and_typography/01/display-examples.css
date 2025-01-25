@@ -1,0 +1,25 @@
+/* Styling for all sections */
+section {
+    border: 2px solid black;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+}
+
+/* Styling for all paragraphs in sections */
+section p {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+/* Specific display properties for each section type */
+.block p {
+    display: block;
+}
+
+.inline p {
+    display: inline;
+}
+
+.inline-block p {
+    display: inline-block;
+}

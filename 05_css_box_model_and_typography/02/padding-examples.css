@@ -1,0 +1,23 @@
+/* Common styles for all boxes */
+div {
+    margin: 20px;
+    border: 2px solid black;
+}
+
+p {
+    margin: 0;
+}
+
+/* Specific padding styles */
+.uniform-padding {
+    padding: 20px;
+}
+
+.non-uniform-padding {
+    padding: 10px 30px 20px 40px;
+}
+
+.percentage-padding {
+    width: 80%;
+    padding: 5%;
+}
