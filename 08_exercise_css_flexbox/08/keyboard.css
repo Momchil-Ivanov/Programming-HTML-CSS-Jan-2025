@@ -1,0 +1,170 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.keyboard {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.key {
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-right: 8px;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: lowercase;
+}
+
+.key:last-child {
+    margin-right: 0;
+}
+
+.wide {
+    min-width: 50px;
+}
+
+.wide-tab {
+    min-width: 60px;
+}
+
+.wide-caps {
+    min-width: 80px;
+}
+
+.wide-shift {
+    min-width: 89px;
+}
+
+.wide-ctrl {
+    min-width: 60px;
+}
+
+.wide-enter {
+    min-width: 70px;
+}
+
+.space {
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+/* Specific spacing for F-keys */
+.row:first-child {
+    display: flex;
+    width: 100%;
+}
+
+/* Keep esc position fixed */
+.row:first-child .key:first-child {
+    margin-right: 8px;  /* Default margin for esc key */
+}
+
+/* Adjust spacing for F-keys after esc */
+.row:first-child .key:not(:first-child) {
+    margin-right: 11.6px;  /* Increased spacing between F-keys */
+    flex: 0 0 auto;      /* Don't flex these keys */
+}
+
+/* Remove margin from the last F-key */
+.row:first-child .key:last-child {
+    margin-right: 0;
+}
+
+/* Adjust right shift width */
+.row:nth-child(5) .key:last-child {  /* Target the last key in the shift row */
+    min-width: 59px;  /* Reduced from 90px */
+}
+
+/* Keep left shift width unchanged */
+.wide-shift {
+    min-width: 89px;
+}
+
+.enter {
+    position: absolute;
+    right: 20px;  /* Changed from 90px to 20px to be next to ] */
+    top: 108px;
+    width: 70px;
+    height: 82px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+    z-index: 1;
+}
+
+/* Keep backslash key position */
+.row:nth-child(4) .key:last-child {
+    visibility: visible;
+    margin-right: 0;
+}
+
+/* Remove any previous enter-related classes */
+.enter-wrapper, .enter-top, .enter-bottom, .enter-horizontal, .enter-vertical {
+    display: none;
+}
+
+/* Make right ctrl slightly narrower */
+.row:last-child .key:last-child {
+    min-width: 59px;  /* Reduced from 59px */
+    margin-right: 0px;  /* Add small margin to shift it left */
+}
+
+/* Keep left ctrl width unchanged */
+.wide-ctrl {
+    min-width: 60px;
+}
+
+.l-enter {
+    position: relative;
+    float: right;  /* Float it to the right */
+    margin-top: -170px;  /* Pull it up to align with the rows */
+    margin-right: -0px;
+    width: 65px;
+    height: 72px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        40% 100%,
+        40% 41%,
+        0 41%
+    );
+}
+
+/* Grey keys */
+.row:first-child .key,  /* esc and F-keys */
+.key[class*="wide"],    /* All wide keys (ctrl, win, alt) */
+.l-enter {             /* Enter key */
+    background-color: #f0f0f0;  /* Light grey color */
+}

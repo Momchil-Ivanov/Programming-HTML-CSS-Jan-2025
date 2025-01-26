@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header, .main, .footer {
+    padding: 20px;
+    border: 2px solid blue;
+    margin: 10px;
+}
+
+.main {
+    flex: 1;
+    min-height: 400px;
+}
+
+body {
+    border: 2px solid green;
+    margin: 10px;
+} 

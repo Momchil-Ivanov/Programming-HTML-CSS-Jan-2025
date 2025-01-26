@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Tree View</title>
+    <link rel="stylesheet" href="expandable-tree-view.css">
+</head>
+<body>
+    <h1>Collapsable & expandable tree view in HTML & CSS only</h1>
+    
+    <div class="tree">
+        <div class="tree-item">
+            <input type="checkbox" id="giant-planets">
+            <label for="giant-planets">Giant planets</label>
+            
+            <div class="nested">
+                <div class="tree-item">
+                    <input type="checkbox" id="gas-giants">
+                    <label for="gas-giants">Gas giants</label>
+                    
+                    <div class="nested">
+                        <div class="tree-item">Jupiter</div>
+                        <div class="tree-item">Saturn</div>
+                    </div>
+                </div>
+                
+                <div class="tree-item">
+                    <input type="checkbox" id="ice-giants">
+                    <label for="ice-giants">Ice giants</label>
+                    
+                    <div class="nested">
+                        <div class="tree-item">Uranus</div>
+                        <div class="tree-item">Neptune</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

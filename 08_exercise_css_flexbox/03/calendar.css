@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.calendar-container {
+    background: white;
+    border-radius: 0.625rem;  /* 10px */
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 62.5rem;  /* 1000px */
+}
+
+.header {
+    padding: 0.625rem;  /* 10px */
+    text-align: center;
+    border: 0.0625rem solid #ddd;  /* 1px */
+    font-weight: bold;
+}
+
+.day {
+    padding: 0.625rem;  /* 10px */
+    border: 0.0625rem solid #ddd;  /* 1px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 6.25rem;  /* 100px */
+}
+
+.workdays {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.weekend-days {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.side-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.side-section .header {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.side-section .header:first-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.reminders, .special-dates {
+    border-bottom: 1px solid #ddd;
+}
+
+.workweek-section, .weekend-section {
+    border-bottom: 1px solid #ddd;
+}
+
+.weekend-section .day {
+    min-height: 150px;
+} 

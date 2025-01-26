@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #ebebeb;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.quote-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote content styling */
+.quote-card:before {
+    content: "❝";
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #000;
+    position: relative;
+    left: -5px;
+    display: block;
+}
+
+.quote-text {
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Left column cards */
+.quote-card:nth-child(1),
+.quote-card:nth-child(2) {
+    grid-column: 1;
+    margin-bottom: 5px;
+}
+
+.quote-card:nth-child(2) {
+    margin-bottom: 0;
+}
+
+.quote-card:nth-child(1) .quote-text,
+.quote-card:nth-child(2) .quote-text,
+.quote-card:nth-child(1) .author-name,
+.quote-card:nth-child(2) .author-name {
+    padding-right: 180px;
+}
+
+/* Right column card */
+.quote-card:last-child {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-card:last-child .author-name {
+    margin-bottom: 25px;
+}
+
+/* Green circles */
+.green-circle {
+    background-color: #00a651;
+    border-radius: 50%;
+    position: absolute;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0, 166, 81, 0.4);
+}
+
+/* Left cards circles */
+.quote-card:nth-child(1) .green-circle,
+.quote-card:nth-child(2) .green-circle {
+    width: 140px;
+    height: 140px;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Right card circle */
+.quote-card:last-child .green-circle {
+    width: 70px !important;
+    height: 70px !important;
+    left: 30px;
+    bottom: 200px;
+} 
