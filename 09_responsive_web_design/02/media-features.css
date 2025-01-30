@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-top: 0;
+    font-style: italic;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+pre {
+    margin: 0;
+    font-family: monospace;
+}
+
+/* Media query messages */
+body::before {
+    display: block;
+    background-color: #3876BF;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+@media (hover: none) {
+    body::before {
+        content: 'This device doesn\'t support hover';
+    }
+}
+
+@media (orientation: landscape) {
+    body::before {
+        content: 'The device is in landscape orientation';
+    }
+}
+
+@media (width: 600px) {
+    body::before {
+        content: 'The viewport width is 600px';
+    }
+}
+
+@media (height: 800px) {
+    body::before {
+        content: 'The viewport height is 800px';
+    }
+} 

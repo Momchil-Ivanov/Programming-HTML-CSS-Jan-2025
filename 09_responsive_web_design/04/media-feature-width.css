@@ -1,0 +1,41 @@
+/* Basic styling */
+body {
+    margin: 40px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+body::before {
+    display: block;
+    background-color: #3B7796;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+@media (width: 800px) {
+    body::before {
+        content: 'The viewport width is exactly 800px';
+    }
+}
+
+@media (min-width: 800px) {
+    body::before {
+        content: 'The viewport width is larger than 800px';
+    }
+}
+
+@media (max-width: 800px) {
+    body::before {
+        content: 'The viewport width is smaller than 800px';
+    }
+}

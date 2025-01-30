@@ -1,0 +1,60 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+p {
+    margin-top: 0;
+    color: #444;
+}
+
+/* Media Queries */
+@media (min-width: 30em) and (orientation: landscape) {
+    body::before {
+        display: block;
+        content: 'The viewport width is larger than 30em and the orientation is landscape.';
+    }
+}
+
+@media (min-height: 680px), screen and (orientation: portrait) {
+    body::before {
+        display: block;
+        content: 'The viewport height is larger than 680px or the media type is screen and the orientation is portrait.';
+    }
+}
+
+@media not (min-width: 600px) {
+    body::before {
+        display: block;
+        content: 'The view port is NOT larger than 600px';
+    }
+}
+
+/* Styles for the ::before pseudo-element */
+body::before {
+    background-color: #3878ba;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+} 

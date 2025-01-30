@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Media query for devices that don't support hover */
+@media (hover: none) {
+    body::before {
+        display: block;
+        content: 'The device does NOT support hover';
+        background-color: #336699;
+        color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+}
+
+/* Media query for devices that support hover */
+@media (hover: hover) {
+    body::before {
+        display: block;
+        content: 'The device does support hover';
+        background-color: #336699;
+        color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+}
+
+/* Add styles for code display */
+pre {
+    font-family: monospace;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    white-space: pre;
+}
+
+/* Ensure proper spacing between sections */
+p + pre {
+    margin-top: 15px;
+} 
