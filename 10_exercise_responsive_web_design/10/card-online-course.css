@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;  /* Default to row for wider screens */
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card-container {
+    width: calc(33.333% - 2rem);
+    background: transparent;  /* Remove background */
+    border: none;  /* Remove border */
+    border-radius: 12px;
+    padding: 0;  /* Remove padding */
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;  /* Remove shadow */
+    border: none;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.course-type {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    background: rgba(68, 193, 158, 0.75);
+}
+
+/* Course type variants */
+.course-type.online-live {
+    background: rgba(68, 193, 158, 0.75);  /* #44C19E with opacity */
+}
+
+.course-type.video {
+    background: rgba(166, 88, 230, 0.75);  /* #A658E6 with opacity */
+}
+
+.course-type.workshop {
+    background: rgba(234, 169, 49, 0.75);  /* #EAA931 with opacity */
+}
+
+.instructor {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 0.20rem 0.20rem;
+    padding-right: 70px;
+    padding-left: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    z-index: 3;
+    min-width: 140px;
+}
+
+.instructor span::before {
+    content: '👨‍🏫';
+    margin-right: 4px;
+    font-size: 0.9rem;
+}
+
+/* Ensure all instructor elements stay on top */
+.instructor * {
+    position: relative;
+    z-index: 999;
+}
+
+/* Ensure the title stays below */
+.title-section, 
+.title-section h2,
+.title-section p {
+    z-index: 2;
+}
+
+.instructor img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;  /* Lower z-index for content */
+    padding: 1.5rem;
+    background: #f9f9f9;
+}
+
+.title-section {
+    background: white;
+    margin: -3rem -1rem 1.5rem;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.title-section h2 {
+    margin: 0;
+    padding: 0 0 0.75rem 0;
+    border-bottom: 2px solid #DDDDDD;
+    margin-bottom: 0.75rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.title-section p {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    font-size: 0.9rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: white;
+    margin: -1.5rem -1.5rem 0 -1.5rem;
+    position: relative;
+    z-index: 1;  /* Ensure heading stays below instructor */
+}
+
+p {
+    color: #666;
+    background: white;
+    margin: 0 -1.5rem 1.5rem -1.5rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.groups-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.groups-header h3 {
+    font-weight: 700;  /* Increased from default */
+}
+
+.view-all {
+    color: #16C79A;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;  /* Increased from 600 */
+}
+
+.group-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0 2rem;
+    margin-top: -0.5rem;
+}
+
+.group-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #FBFBFB;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    margin: 0 -2rem;
+}
+
+.dates {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.start {
+    min-width: 120px;  /* Smaller fixed width */
+}
+
+.end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;  /* Specific margin to position it */
+    margin-right: 3rem;  /* Space before price */
+}
+
+.start span, .end span {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.start .time-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+time {
+    font-weight: bold;
+}
+
+.price {
+    font-weight: 600;
+    color: #16C79A;
+    font-size: 1.25rem;
+}
+
+.card-footer {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: white;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-footer .price {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #16C79A;
+    margin-left: -0.5rem;
+}
+
+.card-footer .price::before {
+    content: '💳';
+    margin-right: 8px;
+    font-size: 1.8rem;
+    color: #16C79A;
+}
+
+.details {
+    display: flex;
+    gap: 2rem;
+    color: #16C79A;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* For screens smaller than 800px */
+@media screen and (max-width: 800px) {
+    body {
+        flex-direction: column;  /* Stack cards vertically */
+    }
+
+    .card-container {
+        width: 100%;
+    }
+}
+
+/* Add this new style */
+.start time:first-of-type::before,
+.end time:first-of-type::before {
+    content: '📅';
+    margin-right: 4px;
+    font-size: 0.9rem;
+}
+
+.start time:last-of-type {
+    margin-left: auto;  /* Push time to the right */
+    display: flex;
+    align-items: center;
+}
+
+.start time:last-of-type::before {
+    content: '🕐';
+    margin-right: 4px;
+    font-size: 0.9rem;
+}
+
+.group-slot .price {
+    color: #727272;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1400px) {
+    .group-slot {
+        padding: 1rem;  /* Reduced padding */
+    }
+
+    .dates {
+        gap: 1rem;  /* Reduced gap */
+    }
+
+    .start {
+        min-width: 100px;  /* Reduced min-width */
+    }
+
+    .end {
+        margin-left: 1.5rem;  /* Reduced margin */
+        margin-right: 1.5rem;
+    }
+
+    .group-slot .price {
+        min-width: 80px;  /* Ensure price has minimum width */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .card-container {
+        width: calc(50% - 2rem);  /* Switch to 2 columns */
+    }
+
+    .group-slot {
+        margin: 0 -1rem;  /* Reduced negative margin */
+    }
+
+    .group-slots {
+        padding: 0 1rem;  /* Adjusted padding */
+    }
+
+    .start .time-group {
+        display: flex;
+        flex-direction: column;  /* Stack time vertically */
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card-container {
+        width: 100%;  /* Full width on mobile */
+    }
+}
