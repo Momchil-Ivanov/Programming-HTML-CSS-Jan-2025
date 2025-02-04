@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 2em;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+.example {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.example pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.example code {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+fieldset {
+    padding: 2em;
+    border: 2px solid #ccc;
+    max-width: 50ch;
+}
+
+fieldset legend {
+    padding: 0 1em;
+    font-weight: bold;
+}
+
+fieldset label {
+    font-weight: bold;
+}
+
+fieldset input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+fieldset input[type="submit"] {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.field {
+    padding-bottom: 1.5em;
+}

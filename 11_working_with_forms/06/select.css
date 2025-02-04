@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.example {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.example pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.example code {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+select {
+    display: inline-block;
+    padding: 0.5em 0.8em;
+    border: 2px solid #ccc;
+    border-radius: 0.3em;
+    background-color: #EEEEEE;
+}
+
+select option {
+    background-color: white;
+}
+
+label {
+    cursor: pointer;
+}
+
+body > p {
+    margin: 5px 0;
+}
+
+/* Keep the original spacing for the description paragraph */
+h1 + p {
+    margin-bottom: 20px;
+}
+
+code {
+    font-weight: bold;
+}
+
+/* Style for the default option */
+select option:first-child {
+    color: #666;
+}
