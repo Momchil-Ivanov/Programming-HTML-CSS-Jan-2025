@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    border: 2px solid #008000;
+    padding: 16px;
+}
+
+.section {
+    padding: 32px calc((100vw - 600px) / 2);
+    border: 2px solid blue;
+    margin: 16px 0;
+}
+
+@media (min-width: 800px) {
+    .section {
+        padding: 32px calc((100vw - 800px) / 2);
+    }
+}
+
+@media (min-width: 1200px) {
+    .section {
+        padding: 32px calc((100vw - 1200px) / 2);
+    }
+}
+
+h2 {
+    margin-bottom: 16px;
+}
+
+p {
+    line-height: 1.5;
+} 

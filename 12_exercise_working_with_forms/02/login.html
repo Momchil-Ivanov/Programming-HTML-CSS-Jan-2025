@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <div class="divider"></div>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" required>
+                    <span class="icon email-icon" onclick="document.getElementById('email').focus()">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                </div>
+                <span class="helper-text">example: konstantin.dankov@gmail.com</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" required>
+                    <span class="icon password-icon" onclick="document.getElementById('password').focus()">
+                        <i class="fa-solid fa-key"></i>
+                    </span>
+                </div>
+                <span class="helper-text">minimum 6 characters, letters and numbers, at least 1 special character</span>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html> 

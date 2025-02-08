@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+/* Radio buttons */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #FFA500;
+    border-radius: 50%;
+    border: 1px solid #E3E3E3;
+    box-sizing: border-box;
+}
+
+.radio-container input:checked ~ .radio-custom {
+    background-color: #FFA500;
+    border: none;
+}
+
+.radio-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #C67615;
+    transform: translate(-50%, -50%);
+}
+
+.radio-container input:checked ~ .radio-custom:after {
+    display: block;
+}
+
+/* Toggle switches */
+.toggle-container {
+    display: block;
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.toggle-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 44px;
+    background-color: #FFA500;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.toggle-custom:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #C67615;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-container input:checked ~ .toggle-custom {
+    background-color: #EEEEEE;
+    border: 1px solid #E3E3E3;
+}
+
+.toggle-container input:checked ~ .toggle-custom:before {
+    transform: translateX(20px);
+} 
