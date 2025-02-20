@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 1rem 0;
+  background: linear-gradient(90deg, #ff7088 30%, #f2b59d 50%);
+
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fef0f6;
+  font-weight: lighter;
+}
+
+nav a.active {
+  color: #fff;
+  font-weight: 900;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+  padding: 1.25rem 1rem 1.25rem;
+  border-radius: 3px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+  background: linear-gradient(90deg, #ff7088 30%, #f2b59d 50%);
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+.hero p {
+  font-weight: lighter;
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.75rem 2.25rem;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.featured-cars {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.car-card {
+  flex: 1;
+  max-width: 530px;
+  text-align: center;
+  color: #abaec5;
+}
+
+.car-card-box {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 330px;
+    background-color: #f6f8fb;
+    border-top: 1px solid rgba(171, 174, 197, 0.3);
+    border-bottom: 1px solid rgba(171, 174, 197, 0.3);
+    z-index: -1;
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.car-card h2 {
+  color: grey;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.car-card p {
+  text-align: left;
+  letter-spacing: 0.05em;
+  font-size: 0.93rem;
+  padding-bottom: 1.5rem;
+}
+
+.car-card .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #abaec5;
+    color: #abaec5;
+    font-weight: 900;
+    text-decoration: none;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+.cta {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 7rem 1rem;
+  background: linear-gradient(135deg, #2c5364 0%, #203a43 100%);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid white;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cta-content p {
+    font-size: 1.8rem;
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #73a198;
+    font-weight: lighter;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+.weird-cars {
+  text-align: center;
+  padding: 4rem 0rem;
+}
+
+.weird-cars h2 {
+    font-size: 2.5rem;
+    color: #abaec5;
+    font-weight: lighter;
+}
+
+.weird-cars .btn {
+    display: inline-block;
+    padding: 0.75rem 2.25rem;
+    border: 1px solid #abaec5;
+    color: #abaec5;
+    font-weight: 900;
+    text-decoration: none;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+.car-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  width: 100%;
+  background-color: #f6f8fb;
+  border-top: 1px solid rgba(171, 174, 197, 0.3);
+  border-bottom: 1px solid rgba(171, 174, 197, 0.3);
+}
+
+.car-grid img {
+  width: 300px;
+  height: auto;
+}
+
+explore::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 700px;
+    height: 1px;
+    background-color: red;
+    opacity: 0.3;
+  }
+
+.explore {
+  background-color: #f5f7fa;
+  text-align: center;
+  padding: 4rem 2rem 4rem;
+  position: relative;
+}
+
+.explore::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: #abaec5;
+    opacity: 0.3;
+    width: 100%;
+}
+
+.explore h2 {
+    font-size: 2rem;
+    color: #635866;
+    font-weight: lighter;
+}
+
+.explore p {
+    color: red;
+    font-weight: lighter;
+}
+
+footer::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 700px;
+    height: 1px;
+    background-color: #abaec5;
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+  
+footer {
+  text-align: center;
+  padding: 3rem 2rem 5rem;
+  color: #abaec5;
+  background-color: #f5f7fa;
+  position: relative;
+  font-weight: lighter;
+}
